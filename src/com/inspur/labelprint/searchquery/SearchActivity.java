@@ -34,6 +34,15 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * 加入git
+* @ClassName: SearchActivity
+* @Description: TODO(这里用一句话描述这个类的作用)
+* @author Administrator
+* @date 2015年3月12日 下午3:39:29
+*
+ */
 public class SearchActivity extends Activity  {
 
 
@@ -76,6 +85,8 @@ public class SearchActivity extends Activity  {
 				if (msg.what == 1) {
 					
 					dialog.hide();
+					
+					
 					
 					JSONObject jsonObject=null;
 					try {
