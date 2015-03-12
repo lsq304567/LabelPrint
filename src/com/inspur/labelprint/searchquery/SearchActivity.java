@@ -83,8 +83,8 @@ public class SearchActivity extends Activity  {
 		handler = new Handler() {	
 			public void handleMessage(Message msg) {
 				if (msg.what == 1) {
-					
-					dialog.hide();
+					//hide改为dismiss,hide不会释放资源，如不在onPause方法处理会造成leak
+					dialog.dismiss();
 					
 					
 					
