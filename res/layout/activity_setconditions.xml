@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#e4f0ff"
+    android:padding="10dp">
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@drawable/search_item_bg"
+	    >
+    
+		<!-- 所属机房 -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    style="@style/search_item_style"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+		    <TextView
+	                style="@style/search_item_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:layout_marginRight="5dp"
+	                android:drawableLeft="@drawable/left_finder"
+	                android:focusable="true"
+	                android:focusableInTouchMode="true"
+	                android:text="所属机房" />
+		    <AutoCompleteTextView
+			    android:id="@+id/act_machineroom"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:textColor="@color/black"
+				/>
+		</LinearLayout>    	
+		<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e1e8f2" />
+		
+		<!-- 业务标识 -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    style="@style/search_item_style"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+		    <TextView
+	                style="@style/search_item_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:layout_marginRight="5dp"
+	                android:drawableLeft="@drawable/left_list"
+	                android:focusable="true"
+	                android:focusableInTouchMode="true"
+	                android:text="业务标识 " />
+		    <AutoCompleteTextView
+			    android:id="@+id/act_businessflag"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:textColor="@color/black"
+				/>
+		</LinearLayout> 
+		<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e1e8f2" />
+		
+		<!-- 线路名称 -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    style="@style/search_item_style"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+		    <TextView
+	                style="@style/search_item_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:layout_marginRight="5dp"
+	                android:drawableLeft="@drawable/left_flag"
+	                android:focusable="true"
+	                android:focusableInTouchMode="true"
+	                android:text="线路名称 " />
+		    <AutoCompleteTextView
+			    android:id="@+id/act_linename"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:textColor="@color/black"
+				/>
+		</LinearLayout> 
+		<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e1e8f2" />
+		<!-- 资源管理单位 -->
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    style="@style/search_item_style"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+		    <TextView
+	                style="@style/search_item_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:layout_marginRight="5dp"
+	                android:drawableLeft="@drawable/left_name"
+	                android:focusable="true"
+	                android:focusableInTouchMode="true"
+	                android:text="资源管理单位" />
+		    <AutoCompleteTextView
+			    android:id="@+id/act_resoucemanager"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:textColor="@color/black"
+				/>
+		</LinearLayout> 
+		<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e1e8f2" />
+	</LinearLayout> 
+	
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/button_selector"
+            android:text="确     认"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

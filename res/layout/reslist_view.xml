@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_detail_title"
+        android:layout_width="fill_parent"
+        android:layout_height="66dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bar" >
+        <TextView
+            android:id="@+id/ivTitleName"
+
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="96.0dip"
+            android:paddingRight="96.0dip"
+            android:singleLine="true"
+            android:text="勾选资源" />
+
+        <ImageButton
+            android:id="@+id/ivTitleBtnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:includeFontPadding="false" />
+
+        <ImageButton
+            android:id="@+id/ivTitleBtnRigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/print_btn_normal"
+            android:gravity="center"
+            android:layout_marginRight="5dip"
+            android:includeFontPadding="false" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/hvlist_view"
+
+        android:focusable="true" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DADBDA" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#0BA683"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_frontpage"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pressed_style"
+            android:text="上一页"
+            android:textColor="#FDFEFE"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#DADBDA" />
+
+        <Button
+            android:id="@+id/btn_afterpage"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pressed_style"
+            android:text="下一页"
+            android:textColor="#FDFEFE"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_currentpage"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+</LinearLayout>

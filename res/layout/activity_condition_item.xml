@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_rlt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4f0ff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+	<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/ll_top_seach">
+	    <com.inspur.common.view.MyEditText
+	        android:id="@+id/search_met"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_margin="7dp"
+	        android:background="@drawable/edittext_bg"
+	        android:drawableLeft="@drawable/search_hint"
+	        android:drawableRight="@drawable/delete_hint"
+	        android:ems="15"
+	        android:hint="@string/attribute_search_hint"
+	        android:imeOptions="actionSearch"
+	        android:singleLine="true"
+	        android:textColor="@android:color/black"
+	        android:textSize="17sp" >
+	    </com.inspur.common.view.MyEditText>
+		<Button
+            android:id="@+id/btn_confirm_con"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="8dip"
+            android:background="@drawable/button_selector"
+            android:text="确定"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <!-- <ListView
+        android:id="@+id/lv_condition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top_seach" > 
+    </ListView> -->
+	<com.inspur.common.view.XListView
+        android:id="@+id/lv_condition"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/ll_top_seach"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/list_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="#e1e8f2"
+        android:dividerHeight="0.5dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="1dp" >
+    </com.inspur.common.view.XListView>
+</RelativeLayout>

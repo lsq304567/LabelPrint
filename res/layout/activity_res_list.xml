@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_rlt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4f0ff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+	<com.inspur.common.view.XListView
+        android:id="@+id/lv_reslist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/ll_top_seach"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/list_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="#e1e8f2"
+        android:dividerHeight="0.5dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="1dp" >
+    </com.inspur.common.view.XListView>
+</RelativeLayout>
