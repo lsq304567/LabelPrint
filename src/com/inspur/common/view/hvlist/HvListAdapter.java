@@ -123,8 +123,7 @@ public class HvListAdapter extends BaseAdapter{
                 TextView tv=new TextView(ctx);
                 tv.setLayoutParams(new LinearLayout.LayoutParams(150,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
-                tv.setMaxLines(1);
-                //tv.setGravity(View.al  View.TEXT_ALIGNMENT_CENTER);
+                tv.setMaxLines(3);
                 tv.setTextAppearance(ctx,R.style.text_title_style2);
                 //名称列宽度放大
                 if(k==1 || k==0){
@@ -134,6 +133,7 @@ public class HvListAdapter extends BaseAdapter{
 
                 if(i == 0){
                 	tv.setTextSize(17);
+                	
                     tv.setText(hTitle);
                     tv.setBackgroundColor(ctx.getResources().getColor(R.color.papayawhip));
                 }else{
