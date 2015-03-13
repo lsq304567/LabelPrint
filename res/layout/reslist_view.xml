@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_bg"
-    android:orientation="vertical">
+    android:orientation="vertical" >
 
     <RelativeLayout
         android:id="@+id/rl_detail_title"
@@ -11,9 +11,9 @@
         android:layout_height="66dip"
         android:layout_alignParentTop="true"
         android:background="@drawable/title_bar" >
+
         <TextView
             android:id="@+id/ivTitleName"
-
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_centerInParent="true"
@@ -29,9 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5dip"
             android:layout_centerVertical="true"
-            android:background="@drawable/btn_back"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/btn_reback"
             android:gravity="center"
             android:includeFontPadding="false" />
 
@@ -41,17 +41,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
             android:background="@drawable/print_btn_normal"
             android:gravity="center"
-            android:layout_marginRight="5dip"
             android:includeFontPadding="false" />
-
     </RelativeLayout>
 
-    <include layout="@layout/hvlist_view"
-
+    <include
+        layout="@layout/hvlist_view"
         android:focusable="true" />
-
 
     <View
         android:layout_width="match_parent"
@@ -92,11 +90,10 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/tv_currentpage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_currentpage"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </LinearLayout>
-
 
 </LinearLayout>
