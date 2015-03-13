@@ -122,13 +122,13 @@ public class HvListAdapter extends BaseAdapter{
                 String hTitle =titleData[k];
                 TextView tv=new TextView(ctx);
                 tv.setLayoutParams(new LinearLayout.LayoutParams(150,
-                        LinearLayout.LayoutParams.WRAP_CONTENT+10));
+                        60));
                 tv.setMaxLines(3);
                 tv.setTextAppearance(ctx,R.style.text_title_style2);
                 //名称列宽度放大
                 if(k==1 || k==0){
                     tv.setLayoutParams(new LinearLayout.LayoutParams(title_clu,
-                            LinearLayout.LayoutParams.WRAP_CONTENT));
+                            60));
                 }
 
                 if(i == 0){

@@ -217,6 +217,8 @@ public class RResListActivity extends Activity implements View.OnClickListener{
      * 初始化
      */
     protected void init() {
+    	
+    	this.getActionBar().hide();
         bakBtn= (ImageButton)findViewById(R.id.ivTitleBtnLeft);
         printEye = (ImageButton)findViewById(R.id.ivTitleBtnRigh);
         listview =(ListView) findViewById(R.id.lv_content);
