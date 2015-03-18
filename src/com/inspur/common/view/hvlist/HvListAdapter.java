@@ -1,8 +1,13 @@
 package com.inspur.common.view.hvlist;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.text.TextUtils.TruncateAt;
+import android.text.method.ScrollingMovementMethod;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings.TextSize;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -23,6 +28,7 @@ import java.util.Map;
  * Created by Administrator on 2014/12/18 0018.
  * 动态生成带表头和第一列为checkbox的可横向滑动的ListView
  */
+@SuppressLint("ResourceAsColor")
 public class HvListAdapter extends BaseAdapter{
 
     private static ListView.LayoutParams FILL_FILL_LAYOUTPARAMS =
@@ -87,6 +93,14 @@ public class HvListAdapter extends BaseAdapter{
         ll.setLayoutParams(WAP_WAP_LAYOUTPARAMS);
         ll.setOrientation(LinearLayout.HORIZONTAL);
         ll.setBackgroundDrawable(ctx.getResources().getDrawable(R.drawable.listview_item_pressed_style));
+        
+        ll.setGravity(Gravity.CENTER_VERTICAL);
+        
+        if(i>0){
+        	if(i%2==0){
+        		ll.setBackgroundColor(R.color.grey);
+        	}
+        }
         CheckBox cb =new CheckBox(ctx);
         cb.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT
                  ,LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -121,24 +135,30 @@ public class HvListAdapter extends BaseAdapter{
             for(int k=0;k<titleData.length;k++){
                 String hTitle =titleData[k];
                 TextView tv=new TextView(ctx);
-                tv.setLayoutParams(new LinearLayout.LayoutParams(150,
-                        60));
-                tv.setMaxLines(3);
+                tv.setLayoutParams(new LinearLayout.LayoutParams(300,
+                        LinearLayout.LayoutParams.WRAP_CONTENT));
+                tv.setMaxLines(1);
+                //tv.setGravity(View.al  View.TEXT_ALIGNMENT_CENTER);
                 tv.setTextAppearance(ctx,R.style.text_title_style2);
                 //名称列宽度放大
                 if(k==1 || k==0){
                     tv.setLayoutParams(new LinearLayout.LayoutParams(title_clu,
-                            60));
+                            LinearLayout.LayoutParams.WRAP_CONTENT));
                 }
-
+                
+                tv.setGravity(Gravity.CENTER_VERTICAL);
+            	tv.setHeight(100);
                 if(i == 0){
                 	tv.setTextSize(17);
-                	
                     tv.setText(hTitle);
-                    tv.setBackgroundColor(ctx.getResources().getColor(R.color.papayawhip));
+//                    tv.setBackgroundColor(ctx.getResources().getColor(R.color.papayawhip));
+                    ll.setBackgroundColor(R.color.yellow);
                 }else{
-
+                	tv.setSingleLine(false);  
                     tv.setTextSize(13);
+                    tv.setMaxHeight(100);
+                    tv.setEllipsize(TruncateAt.MARQUEE);
+//                    tv.setMarqueeRepeatLimit(TextView.m);
                     tv.setText(reflectBean(mdata.get(i-1),methodData[k]));
                 }
 
@@ -169,6 +189,17 @@ public class HvListAdapter extends BaseAdapter{
         }
         return result;
     }
+    public List<Integer> getSelectedItem(){
+          List<Integer> result =new ArrayList<Integer>();
+          for(int i=1;i<mdata.size()+1;i++){
+              if(isCheckMap.get(i)){
+                  result.add(i);
+              }
+          }
+          return result;
+      }
+    
+    
 
     public String reflectBean(HvDynamicBean item,String methodName){
         String result="";

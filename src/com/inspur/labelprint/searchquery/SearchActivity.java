@@ -249,6 +249,8 @@ public class SearchActivity extends Activity  {
 		reqInfo.context=cxt;
 		reqInfo.requestUrl=URLManager.URL+URLManager.PRINT_QUERYRESOURCENOTE;
 		
+		Log.i("reqInfo.requestUrl", reqInfo.requestUrl);
+		
 		new Thread() {
 			@Override
 			public void run() {
@@ -277,6 +279,10 @@ public class SearchActivity extends Activity  {
 		if(jsonData==null || jsonData.length()<=0){
 			return;
 		}
+		list.clear();
+		professionList.clear();
+		resourceList.clear();
+		resclassnameList.clear();
 		
 		try {
 			JSONArray jsonArray=new JSONArray(jsonData);

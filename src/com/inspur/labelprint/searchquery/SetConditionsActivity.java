@@ -262,7 +262,7 @@ public class SetConditionsActivity extends Activity{
         public void onClick(View v) {
             //跳转到下一个Activity
 //			Intent intent=new Intent(cxt,ResListActivity.class);
-            Intent intent=new Intent(cxt,RResListActivity.class);
+            Intent intent=new Intent(cxt,RRResListActivity.class);
 
             Bundle bundle = new Bundle();
 
@@ -279,7 +279,7 @@ public class SetConditionsActivity extends Activity{
                         conditionStr.append(obj_k+" like '%"+obj_v+"%'");
                     }else{
                         conditionStr.append(" and ");
-                        conditionStr.append(obj_k+"="+obj_v);
+                        conditionStr.append(obj_k+"='"+obj_v+"'");
                     }
 
                 }
