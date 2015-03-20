@@ -47,10 +47,13 @@
             android:includeFontPadding="false" />
     </RelativeLayout>
 
-    <include
+    <!-- <include
         layout="@layout/hvlist_view"
+        android:focusable="true" /> -->
+	<include
+        layout="@layout/hvlist_view_new"
         android:focusable="true" />
-
+	
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"

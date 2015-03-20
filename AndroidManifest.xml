@@ -67,6 +67,8 @@
         </activity>
         <activity android:name="com.inspur.labelprint.searchquery.RRResListActivity" >
         </activity>
+        <activity android:name="com.inspur.labelprint.searchquery.RRRResListActivity" >
+        </activity>
         <activity android:name="com.inspur.labelprint.PrintViewActivity" >
         </activity>
     </application>

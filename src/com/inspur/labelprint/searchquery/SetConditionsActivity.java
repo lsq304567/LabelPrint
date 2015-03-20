@@ -262,7 +262,7 @@ public class SetConditionsActivity extends Activity{
         public void onClick(View v) {
             //跳转到下一个Activity
 //			Intent intent=new Intent(cxt,ResListActivity.class);
-            Intent intent=new Intent(cxt,RRResListActivity.class);
+            Intent intent=new Intent(cxt,RRRResListActivity.class);
 
             Bundle bundle = new Bundle();
 

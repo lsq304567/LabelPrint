@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/green"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+	
+    <!-- 第一列  -->
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/ll_first_column">
+        <CheckBox 
+	        android:layout_width="40dp"
+	        android:visibility="gone"
+	        android:id="@+id/cb_ischeck"
+	        android:button="@drawable/checkbox_checked_style"
+	        android:layout_height="40dp"/>
+ 			
+    </LinearLayout>
+   
+    <com.inspur.common.view.HVScrollListView.InterceptScrollContainer
+        android:id="@+id/scroollContainter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/ll_first_column"
+        android:focusable="false" >
+
+        <com.inspur.common.view.HVScrollListView.HScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:scrollbars="none" >
+			<!-- 滑动内容 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:id="@+id/ll_contnet"
+                android:orientation="horizontal" >
+
+            </LinearLayout>
+        </com.inspur.common.view.HVScrollListView.HScrollView>
+    </com.inspur.common.view.HVScrollListView.InterceptScrollContainer>
+
+</RelativeLayout>

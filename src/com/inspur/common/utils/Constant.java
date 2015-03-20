@@ -3,6 +3,8 @@ package com.inspur.common.utils;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.widget.RelativeLayout.LayoutParams;
+
 public class Constant {
 
 	public final static int SUCCESS = 200;// 请求网络数据成功，这个只是标识，和net code 200 没关系
@@ -23,7 +25,8 @@ public class Constant {
     public final static int DAIHECHA=2;
     public final static int HECHAZHONG=3;
     public final static int HECHAWANC=4;
-
+    
+    public final static LayoutParams HVS_LPARAMS=new LayoutParams(220,80);//HVScrollListView参数
 
     //字典转换器,统一配置在此处
     //工单状态
